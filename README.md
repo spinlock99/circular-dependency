@@ -1,7 +1,14 @@
 # Circular-dependency
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This application shows how a circular dependency can be undefined in EmberCLI.
+
+There are 2 "models" Plan and PlanArray. Each imports the other. The PlanArray
+also has a hash named "embeds" that should contain a key value pair with Plan
+as the value. However, the value is undefined.
+
+Loading the application will throw you into a debugger. To see that embeds
+contains an undefined value, rather than Plan, run:
+`context.model.planArray.embeds` in the debugger console.
 
 ## Prerequisites
 
