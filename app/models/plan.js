@@ -3,8 +3,10 @@ import PlanArray from './plan-array';
 
 export default Ember.Object.extend({
   name: 'Plan',
+  planArray: null,
 
   init: function () {
-    planArray = PlanArray.create();
+    var planArray = PlanArray.create();
+    this.set('planArray', planArray);
   }
 });

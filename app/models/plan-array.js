@@ -4,9 +4,6 @@ import Plan from './plan';
 export default Ember.Object.extend({
   name: 'PlanArray',
 
-  thing: Plan,
+  embeds: {item: Plan}
 
-  init: function () {
-    debugger;
-  }
 });
